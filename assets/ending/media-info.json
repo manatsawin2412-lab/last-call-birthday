@@ -1,0 +1,13 @@
+{
+  "format": "H.264 MP4",
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "method": "Six generated photographic keyframes per clip, held with 0.22-second dissolves. This is not native video-model generation.",
+  "clips": {
+    "thai-opens-door.mp4": 9,
+    "ou-brings-cake.mp4": 10.5
+  }
+}
