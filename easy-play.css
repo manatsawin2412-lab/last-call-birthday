@@ -142,3 +142,5 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  #game .stage .wallet-hotspot{width:58px;height:42px}#game .stage .shift-hotspot{width:76px;height:54px}
  #overlay #modal.easy-offerings .easy-offering-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+@media(max-width:1100px),(pointer:coarse){.birthday-cinema:has(.cinema-action:not(.hidden)) .cinema-subtitle{bottom:80px}}
