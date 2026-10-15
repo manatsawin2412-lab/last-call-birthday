@@ -95,3 +95,50 @@
 #overlay #modal.shrine-animation .actions button{background:#11251eeb;border-color:#a5b58b;min-height:7dvh;font-size:max(16px,2.5dvh);padding:1.5dvh 2dvh}
 #overlay #modal.shrine-animation .actions .primary{background:#c08d69;color:#111b16}
 #overlay:has(#modal.shrine-animation){padding:0;overflow:hidden}
+
+/* Touch screens use compact chrome, leaving scene objects unobstructed. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+#game .stage .hot-label{width:max-content;max-width:min(240px,42vw);left:50%;transform:translateX(-50%);white-space:nowrap}
+@media(max-width:1100px),(pointer:coarse){
+ #game{height:100dvh;min-height:100dvh;overflow:hidden;--play-font:16px;--play-small:13px}
+ #game header{position:fixed;inset:0 0 auto;height:32px!important;padding:0 max(10px,env(safe-area-inset-left));z-index:10;gap:8px;background:#07110fe8}
+ #game .wordmark{font-size:15px;white-space:nowrap}#game .wordmark small{display:none}
+ #game .connection{display:none}#game .audio-controls{display:flex;gap:6px;margin-left:auto;align-items:center}
+ #game .icon-btn,#game .full-screen-button{font-size:12px!important;min-height:28px;padding:4px 8px;white-space:nowrap}
+ #game main{height:100dvh;width:100%;padding:0;margin:0}
+ #game .stage{position:fixed;inset:0 0 58px;width:100%;height:calc(100dvh - 58px)!important;max-width:none;aspect-ratio:auto!important;border:0;margin:0;z-index:0}
+ #game .stage .scene-top{display:none}
+ #game .quest-rail{position:fixed;top:36px;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));width:auto;min-height:34px;padding:7px 10px;z-index:8;background:#091b15e8;border-radius:6px}
+ #game .quest-copy small,#game .quest-copy p{display:none!important}
+ #game .quest-copy b{display:block;font-size:15px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ #game .play-dock{position:fixed;inset:auto 0 0!important;top:auto!important;width:100%!important;height:58px!important;min-height:58px!important;max-width:none;display:grid;grid-template-columns:auto auto minmax(0,1fr);padding:6px max(8px,env(safe-area-inset-right))!important;gap:6px;border:0;border-top:1px solid #899d6e66;border-radius:0;background:#071710f5;z-index:15}
+ #game .play-dock button{font-size:15px!important;min-width:0;min-height:44px;height:44px;padding:6px 10px!important;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ #game .play-dock .dock-notes{display:block!important}
+ #game .play-dock .dock-next{font-size:0!important}
+ #game .play-dock .dock-next:after{content:'ทำต่อ →';font-size:16px}
+ #game .stage .hotspot{width:44px;height:44px;font-size:22px}
+ #game .stage .hot-label{font-size:12px!important;line-height:1.4;top:calc(100% + 4px);padding:4px 6px;max-width:180px;white-space:nowrap;transform:translateX(-50%)!important}
+ #game .stage[data-scene="2"] .hot-label{top:auto;bottom:calc(100% + 4px)}
+ #game .stage .wallet-hotspot{width:72px;height:52px}
+ #game .stage .shift-hotspot{width:88px;height:62px}#game .stage .shift-hotspot:before{font-size:11px}
+ #game .stage[data-scene="1"] .hotspot[data-item="sign"]{width:110px;height:48px;font-size:22px}
+ #game .stage[data-scene="1"] .hotspot[data-item="offering"]{width:100px;height:46px}
+ #game .stage[data-scene="1"] .hotspot[data-item="footprints"]{width:84px;height:46px}
+ #game .stage .hotspot[data-item="footprints"]:before,#game .stage .hotspot[data-item="footprints"]:after{width:15px;height:32px;left:14px;top:10px}
+ #game .stage .hotspot[data-item="footprints"]:after{left:49px;top:0}
+ #game .stage .scene-bottom{font-size:10px;bottom:8px}
+ #game .offering-table>span{font-size:12px;bottom:-24px;padding:3px 6px}
+ #overlay #modal{font-size:16px;padding:16px;max-height:94dvh}
+ #overlay #modal h3{font-size:23px;line-height:1.4}
+ #overlay #modal p,#overlay #modal .journal-entry p,#overlay #modal .bubble{font-size:15px;line-height:1.65}
+ #overlay #modal button{font-size:15px;min-height:44px;padding:9px 12px}
+}
+@media(max-width:650px) and (orientation:portrait){
+ #game .stage{inset:auto 0 auto;top:calc(50dvh - 28.125vw);height:56.25vw!important;aspect-ratio:16/9!important}
+ #game .quest-rail:after{content:'หมุนจอแนวนอนเพื่อเห็นฉากใหญ่ขึ้น';display:block;font-size:12px;color:#c5c6a5;margin-top:5px}
+ #game .stage .hot-label{opacity:0;max-width:150px;font-size:11px!important}
+ #game .stage .hotspot.next-clue .hot-label,#game .stage .hotspot:focus-visible .hot-label{opacity:1}
+ #game .stage .hotspot{width:38px;height:38px;font-size:19px}
+ #game .stage .wallet-hotspot{width:58px;height:42px}#game .stage .shift-hotspot{width:76px;height:54px}
+ #overlay #modal.easy-offerings .easy-offering-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
