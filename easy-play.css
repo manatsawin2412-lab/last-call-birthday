@@ -1,0 +1,97 @@
+/* Keep the scene and the next action together, including in a zoomed-out browser. */
+#menu{min-height:100dvh;height:auto;box-sizing:border-box}#menu .menu-content{width:min(86vw,105dvh);max-width:none;margin:0 0 0 7vw;padding:7dvh 0 14dvh;box-sizing:border-box}#menu h1{font-size:max(48px,8.5dvh);line-height:1.2;margin:2dvh 0}#menu h1:after{display:none}#menu .kicker,#menu .edition{font-size:max(11px,1.5dvh);letter-spacing:.4em}#menu .tagline{font-size:max(20px,3dvh);line-height:1.65;margin:2dvh 0}#menu .menu-copy{font-size:max(16px,2.2dvh);line-height:1.7;margin:2dvh 0 3dvh}#menu button{font-size:max(17px,2.3dvh);min-height:max(54px,7dvh);width:min(100%,max(280px,42dvh));padding:1.5dvh 2dvh}#menu button small{font-size:max(13px,1.7dvh)}#menu .menu-options{font-size:max(14px,1.9dvh);gap:3dvh;margin:2dvh 0}#menu input[type=checkbox]{width:max(18px,2.3dvh);height:max(18px,2.3dvh)}#menu small{font-size:max(12px,1.7dvh);line-height:1.7}#menu .menu-foot{font-size:max(10px,1.4dvh);bottom:2.5dvh;left:7vw;right:7vw}#menu .build-label{font-size:max(11px,1.5dvh);right:7vw;bottom:6dvh}
+#game{--play-font:max(16px,2dvh);--play-small:max(13px,1.65dvh);--dock-height:max(64px,8.5dvh)}
+#menu #newGame:disabled,#menu #continueGame:disabled{display:none}#menu .call-ready-note{font-size:max(14px,1.8dvh);line-height:1.6;margin:1.5dvh 0}#menu .edition{margin:2dvh 0 0}
+#game header{height:max(42px,5.5dvh);padding:0 2vw;box-sizing:border-box}#game .wordmark{font-size:var(--play-font)}#game .wordmark small{font-size:max(9px,1.1dvh)}#game .connection{font-size:var(--play-small)}#game .music-control,#game .voice-toggle{display:none}#game .icon-btn{font-size:var(--play-small);min-height:36px}
+#game main{max-width:none;width:100%;padding:8px 2vw calc(var(--dock-height) + 8px);box-sizing:border-box}#game .chapter-head,#game footer,#game .game-grid aside,#game .toolbar,#game .live-subtitle,#game .narrative{display:none!important}
+#game .game-grid{display:block!important}#game .scene-column{display:flex;flex-direction:column;align-items:center;gap:8px}
+#game .quest-rail{width:100%;box-sizing:border-box;margin:0;padding:max(9px,1.2dvh) 18px;min-height:0;display:block}#game .quest-copy small{font-size:max(12px,1.5dvh);margin:0 0 3px}#game .quest-copy b{font-size:var(--play-font);line-height:1.4;font-weight:600}#game .quest-copy p{font-size:var(--play-small);line-height:1.45;margin:3px 0 0}#game .quest-action{display:none}
+#game .stage{width:min(100%,calc((100dvh - max(220px,28dvh))*16/9));height:auto!important;aspect-ratio:16/9!important;min-height:0!important;flex:none;margin:0;box-sizing:border-box}
+#game .stage:after{display:none}#game .scene-top,#game .scene-bottom{font-size:max(11px,1.4dvh);left:2%;right:2%}#game .scene-top{top:3%}#game .scene-bottom{bottom:3%}#game .scene-top span:last-child{display:none}
+#game .hotspot{min-width:max(44px,5.5dvh);min-height:max(44px,5.5dvh);font-size:max(17px,2.2dvh)}#game .hot-label{font-size:var(--play-small);top:100%;padding:4px 8px;opacity:0}#game .hotspot.next-clue .hot-label,#game .hotspot:focus-visible .hot-label,#game .hotspot:hover .hot-label{opacity:1}
+#game .play-dock{position:fixed;left:0;right:0;bottom:0;top:auto;min-height:var(--dock-height);box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 2vw!important;border:0;border-top:1px solid #9da87c66;border-radius:0;background:#0b1716f7;z-index:15}
+#game .play-dock button{display:block!important;min-height:max(46px,6dvh);font-size:var(--play-font);padding:8px 18px;min-width:0;white-space:normal}#game .dock-next{flex:1;max-width:900px;background:#d2b783;color:#172019;border-color:#d2b783;font-weight:600}#game .dock-phone,#game .dock-notes{background:#1c3027;color:#d7decb}body:has(#overlay:not(.hidden)) #game .play-dock{display:none!important}
+.modal{font-size:max(16px,2dvh);width:min(92vw,max(560px,80dvh));padding:max(20px,3dvh);box-sizing:border-box}.modal h3{font-size:max(26px,3.3dvh)}.modal p{font-size:max(16px,2dvh);line-height:1.8}.modal .actions button{font-size:max(16px,2dvh);min-height:max(48px,6dvh);padding:10px 20px}.modal .code{font-size:max(28px,3.5dvh)}
+.game-phone .phone-app small,.game-phone .device-top,.game-phone .phone-note,.game-phone .phone-chat .bubble{font-size:max(14px,1.9dvh)}.game-phone .phone-app>span{font-size:max(30px,4dvh)}.game-phone button{font-size:max(15px,2dvh);min-height:max(44px,5.5dvh)}.game-phone .phone-app{min-height:max(96px,13dvh)}.modal.call-intro .call-avatar{font-size:max(24px,3dvh);width:10dvh;height:10dvh}
+.modal.call-intro{width:min(92vw,max(460px,68dvh));max-width:none;min-width:0;padding:max(20px,3dvh);box-sizing:border-box}.modal.call-intro .call-phone-card{width:100%;padding:12px 0;box-sizing:border-box}.modal.call-intro .call-caption{width:100%;min-width:0;overflow-wrap:normal;word-break:normal;font-size:max(17px,2.2dvh);line-height:1.75;min-height:0}.modal.call-intro .call-phase{font-size:max(16px,2dvh)}.modal.call-intro .call-wave{font-size:max(18px,2.5dvh);letter-spacing:max(3px,.4dvh);margin:2dvh 0}.modal.call-intro .actions{display:flex;flex-direction:column;gap:10px;width:100%}.modal.call-intro .actions button{width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:normal;word-break:normal}
+#game .play-dock .dock-next{max-width:none}
+#game .play-dock .dock-notes{display:block!important}
+.modal.easy-offerings{width:min(92vw,max(860px,120dvh));padding:max(18px,3dvh);max-height:90dvh;box-sizing:border-box}.easy-offerings .kicker{display:none}.easy-offerings h3{margin:0 0 8px}.easy-offerings p{margin:0 0 18px;color:#c6d0ba}.easy-offering-cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.easy-offering-card{display:flex;flex-direction:column;align-items:center;gap:8px;min-height:max(190px,27dvh);padding:14px 8px;background:#233a2d;border:1px solid #b9b18b;border-radius:10px;touch-action:manipulation}.easy-offering-card .offering-photo{height:17dvh;width:10.3dvh;flex:none}.easy-offering-card b{font-size:max(17px,2.2dvh);font-weight:500}.easy-offering-card>span:last-child{font-size:max(13px,1.7dvh);color:#e5cd94}.easy-offering-card:hover,.easy-offering-card:focus-visible{background:#3e5437;outline:2px solid #e1c78d;outline-offset:2px}.easy-offering-card.done{opacity:.5;background:#17291f}.easy-offering-card.done>span:last-child{color:#a6d89f}
+@media(max-width:650px){#game header{height:44px}#game .connection{display:none}#game main{padding:8px 10px 82px}#game .quest-rail{padding:10px 12px}#game .stage{width:100%}#game .play-dock{gap:5px;padding:8px!important}#game .play-dock button{font-size:14px;padding:8px 10px;min-height:52px}#game .dock-notes{display:none!important}.easy-offering-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.easy-offering-card{min-height:155px;gap:5px}.easy-offering-card .offering-photo{height:85px;width:52px}.modal.easy-offerings{width:95vw;padding:18px}.easy-offerings .actions{margin-top:14px}.modal .actions button{flex:1}}
+@media(max-height:520px) and (min-width:651px){#game header{height:35px}#game .quest-copy p,#game .quest-copy small{display:none}#game .quest-rail{padding:7px 12px}#game .stage{width:min(100%,calc((100dvh - 150px)*16/9))}#game .play-dock{min-height:52px}#game .play-dock button{min-height:38px;padding:5px 12px}.easy-offering-card{min-height:140px}.easy-offering-card .offering-photo{height:20dvh}}
+
+/* Evidence keeps a usable physical size even when the browser is zoomed out. */
+#game .stage .hotspot{width:max(52px,8.5dvh);height:max(52px,8.5dvh);min-width:0;min-height:0;font-size:max(23px,3.8dvh);z-index:6;background-color:#14271de6;border-color:#c6c9a4;box-shadow:0 3px 14px #0009}
+#game .stage .hot-label{opacity:1;top:calc(100% + 6px);font-size:max(14px,2.2dvh);padding:.6dvh 1.2dvh;max-width:28dvh;white-space:normal;text-align:center;line-height:1.5;color:#e7e7d0;background:#091810ee;border-color:#a9b38380;pointer-events:none}
+#game .stage .hotspot.next-clue{box-shadow:0 0 0 5px #e3c57435,0 0 22px #e3c57455;border-color:#ffe1a0}
+#game .stage .wallet-hotspot{width:17dvh;height:12dvh;background:#18281b88;border-radius:8px}
+#game .stage .wallet-thumb,#game .stage .wallet-hotspot img{width:100%;height:100%}
+#game .stage .shift-hotspot{width:22dvh;height:15dvh;background:#e3dcc4}
+#game .stage .shift-hotspot:before{font-size:max(13px,2.1dvh)}
+#game .stage[data-scene="1"] .hotspot[data-item="sign"]{width:24dvh;height:12dvh;font-size:4dvh;background:repeating-linear-gradient(0deg,#5f4c2d,#88734c 12px,#625236 14px)}
+#game .stage[data-scene="1"] .hotspot[data-item="footprints"]{width:18dvh;height:10dvh;background:transparent;border:0;box-shadow:none}
+#game .stage .hotspot[data-item="footprints"]:before,#game .stage .hotspot[data-item="footprints"]:after{width:3dvh;height:6.8dvh;left:3dvh;top:2dvh;background:#a7c3bcb8}
+#game .stage .hotspot[data-item="footprints"]:after{left:10dvh;top:0}
+#game .stage[data-scene="1"] .hotspot[data-item="offering"]{width:22dvh;height:10dvh;background:radial-gradient(ellipse at 29% 46%,#e3ca8a 0 14%,transparent 16%),radial-gradient(ellipse at 57% 45%,#b29c53 0 16%,transparent 18%),radial-gradient(ellipse at 78% 45%,#8f3029 0 13%,transparent 15%),linear-gradient(#253e26,#435333)}
+#game .stage[data-scene="1"] .hotspot[data-item="offering"]:before{height:8dvh;width:.5dvh;left:48%;bottom:50%;box-shadow:1dvh 0 #c7a979,-1dvh 0 #c7a979}
+#game .stage[data-scene="1"] .world-prop.leaves{width:23vw;height:auto;min-width:18dvh;aspect-ratio:2.42;filter:brightness(1.05) saturate(.85) drop-shadow(0 8px 5px #000b)}
+#game .stage[data-scene="1"] .world-prop.leaves .prop-label{opacity:1;font-size:max(14px,2.2dvh);padding:.6dvh 1.2dvh;top:100%;background:#091810ee}
+#game .offering-layer .offering-table{min-height:12dvh;font-size:max(16px,2.5dvh)}
+#game .offering-table>span{bottom:-4dvh;font-size:max(14px,2.2dvh);padding:.6dvh 1.2dvh;white-space:nowrap}
+#game .scene-bottom{font-size:max(12px,1.8dvh)}
+@media(max-width:650px){#game .stage .hotspot{width:48px;height:48px;font-size:22px}#game .stage .hot-label{font-size:12px;max-width:120px}#game .stage[data-scene="1"] .world-prop.leaves{width:27%;min-width:90px}}
+
+/* One viewport-based sizing contract for every dialog, including legacy variants. */
+#overlay{padding:3dvh 4vw;grid-template-columns:minmax(0,1fr)}
+#overlay #modal{width:min(92vw,110dvh)!important;max-width:none!important;min-width:0;max-height:92dvh;padding:max(20px,3.5dvh);justify-self:center;overflow:auto;font-size:max(17px,2.5dvh);overflow-wrap:break-word}
+#overlay #modal h3{font-size:max(27px,4dvh);line-height:1.5}
+#overlay #modal p,#overlay #modal .journal-entry b,#overlay #modal .journal-entry p,#overlay #modal .bubble{font-size:max(17px,2.5dvh);line-height:1.8}
+#overlay #modal small,#overlay #modal .kicker,#overlay #modal .shrine-clue,#overlay #modal .shrine-status{font-size:max(13px,2dvh)!important;line-height:1.7}
+#overlay #modal .actions{gap:max(8px,1.5dvh);margin-top:3dvh}
+#overlay #modal button{font-size:max(16px,2.4dvh);min-height:max(48px,7dvh);padding:1.5dvh 2.5dvh;white-space:normal}
+#overlay #modal .folded-sheet{width:22dvh;height:27dvh;margin:3dvh auto}
+#overlay #modal .folded-sheet>span{font-size:6dvh}
+#overlay #modal .visual-clue{padding:3dvh;margin:3dvh 0}
+#overlay #modal .visual-clue pre{font-size:max(17px,2.7dvh);white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.9}
+#overlay #modal img.evidence{max-height:48dvh;object-fit:contain}
+#overlay #modal .code{font-size:max(28px,4.5dvh);padding:2dvh}
+#overlay #modal.easy-offerings,#overlay #modal.shrine-animation{width:min(92vw,140dvh)!important}
+#overlay #modal .device-shell{min-height:0}
+#overlay #modal .device-body{max-height:64dvh;min-height:0;padding:3dvh}
+#overlay #modal .phone-app-grid{gap:3dvh 2dvh}
+#overlay #modal .phone-app>span{width:8dvh;height:8dvh;font-size:4dvh}
+#overlay #modal .phone-chat{max-height:45dvh}
+@media(max-width:650px){#overlay{padding:12px}#overlay #modal{width:calc(100vw - 24px)!important;padding:20px}#overlay #modal .phone-app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* The world fills the desktop viewport; controls sit over its upper corners. */
+#game #thaiWalker{height:38%;width:auto;aspect-ratio:410/543;min-height:0}
+#game .stage[data-scene="3"] #thaiWalker{height:40%}
+#game .stage[data-scene="4"] #thaiWalker{height:43%}
+.full-screen-button{font-size:max(14px,1.9dvh);min-height:36px;padding:6px 14px}
+@media(min-width:651px){
+ #game{--play-font:max(18px,2.6dvh);--play-small:max(14px,2.1dvh);height:100dvh;min-height:100dvh;overflow:hidden}
+ #game header{position:fixed;top:0;left:0;right:0;z-index:10;background:linear-gradient(#06100fe8,#06100f66);border:0}
+ #game main{width:100%;height:100dvh;margin:0;padding:0}
+ #game .stage{position:fixed;inset:0;width:100vw;height:100dvh!important;aspect-ratio:auto!important;max-width:none;margin:0;border:0;z-index:0}
+ #game .stage[data-scene="0"] #backdrop{background-size:100% 100%!important}
+ #game .stage .scene-top{display:none}
+ #game .quest-rail{position:fixed;left:2vw;top:max(52px,7dvh);width:min(43vw,75dvh);z-index:8;border:1px solid #a0ae7870;border-radius:8px;background:#0b1815de;padding:12px 16px}
+ #game .play-dock{top:max(52px,7dvh)!important;left:auto!important;right:2vw!important;bottom:auto!important;width:min(50vw,90dvh)!important;height:auto!important;min-height:0!important;display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:8px;padding:10px!important;border:1px solid #a0ae7870;border-radius:8px;background:#0b1815de}
+ #game .play-dock .dock-next{grid-column:auto}
+ #game .play-dock button{font-size:var(--play-font)!important;padding:8px 12px!important;min-height:max(46px,6.5dvh)}
+ #game .hot-label{font-size:max(14px,2dvh)}
+}
+
+/* Shrine close-up uses the screen height, with controls over the image. */
+#overlay #modal.shrine-animation{position:relative;width:96vw!important;height:96dvh;max-height:96dvh;padding:0;display:block;overflow:hidden;background:#030705}
+#overlay #modal.shrine-animation>.kicker{display:none}
+#overlay #modal.shrine-animation h3{position:absolute;top:2dvh;left:3dvh;right:3dvh;z-index:3;margin:0;font-size:max(22px,3.5dvh);text-shadow:0 2px 8px #000}
+#overlay #modal.shrine-animation .shrine-viewport{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(96vw,calc(96dvh * var(--shrine-ratio,1)))!important;max-width:none!important;height:auto;max-height:none;aspect-ratio:var(--shrine-ratio,1);margin:0;border:0;flex:none;touch-action:none}
+#overlay #modal.shrine-animation .shrine-caption{top:9dvh;bottom:auto;font-size:max(13px,2dvh);left:3dvh}
+#overlay #modal.shrine-animation .shrine-status,#overlay #modal.shrine-animation .shrine-clue{position:absolute;left:3dvh;right:3dvh;z-index:3;background:#06100cde;padding:1dvh 1.5dvh;margin:0!important;font-size:max(15px,2.3dvh)!important;line-height:1.6;pointer-events:none}
+#overlay #modal.shrine-animation .shrine-status{bottom:19dvh}
+#overlay #modal.shrine-animation .shrine-clue{bottom:11dvh}
+#overlay #modal.shrine-animation .actions{position:absolute;left:3dvh;right:3dvh;bottom:2dvh;z-index:4;margin:0;padding:0;display:flex;background:none}
+#overlay #modal.shrine-animation .actions button{background:#11251eeb;border-color:#a5b58b;min-height:7dvh;font-size:max(16px,2.5dvh);padding:1.5dvh 2dvh}
+#overlay #modal.shrine-animation .actions .primary{background:#c08d69;color:#111b16}
+#overlay:has(#modal.shrine-animation){padding:0;overflow:hidden}
